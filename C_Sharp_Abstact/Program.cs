@@ -7,12 +7,11 @@ namespace C_Sharp_Abstact
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Please make a choice \n" +
+
+            int choice = GetMetodInt("Please make a choice \n" +
                 "1. Square \n" +
                 "2. Rectangular \n" +
-                "0. Quit");
-
-            int choice = int.Parse(Console.ReadLine());
+                "0. Quit \n",-1,2);
 
             do
             {
@@ -54,6 +53,17 @@ namespace C_Sharp_Abstact
             } while (choice<0 || choice>2);
            
 
+        }
+        static int GetMetodInt(string desc, int min, int max)
+        {
+            int input;
+            do
+            {
+                Console.Write(desc);
+                input = int.Parse(Console.ReadLine());
+
+            } while (input<=min || input>max);
+            return input;
         }
     }
 }
