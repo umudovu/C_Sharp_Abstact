@@ -31,7 +31,10 @@ namespace C_Sharp_Abstact.Models
 
         public override void CalcArea()
         {
-            Console.WriteLine("Square CalcArea method"); 
+            Console.WriteLine(Math.Pow(_side,2));
+
+            Console.WriteLine("------------------- \n" +
+                "Square CalcArea method"); 
         }
     }
 }

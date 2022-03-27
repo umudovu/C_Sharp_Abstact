@@ -29,6 +29,7 @@ namespace C_Sharp_Abstact
                             int side = int.Parse(Console.ReadLine());
 
                             Square square = new Square(side);
+                            square.Side = side;
                             square.CalcArea();
                         }
                         break;
@@ -41,6 +42,8 @@ namespace C_Sharp_Abstact
                             int length = int.Parse(Console.ReadLine());
 
                             Rectangular rectangular = new Rectangular(width, length);
+                            rectangular.Width = width;
+                            rectangular.Length = length;
 
                             rectangular.CalcArea();
                         }

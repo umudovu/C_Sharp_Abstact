@@ -48,7 +48,11 @@ namespace C_Sharp_Abstact.Models
 
         public override void CalcArea()
         {
-            Console.WriteLine("Rectangula CalcArea method"); ;
+
+
+            Console.WriteLine($"Area of a rectangle: {_width*_length}");
+
+            Console.WriteLine("Rectangulars CalcArea method"); ;
         }
     }
 }
