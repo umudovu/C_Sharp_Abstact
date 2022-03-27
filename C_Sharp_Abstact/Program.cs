@@ -25,8 +25,7 @@ namespace C_Sharp_Abstact
 
                     case 1:
                         {
-                            Console.WriteLine("Write the number you want to calculate");
-                            int side = int.Parse(Console.ReadLine());
+                            int side = GetMetodInt("Write the number you want to calculate");
 
                             Square square = new Square(side);
                             square.Side = side;
@@ -35,11 +34,9 @@ namespace C_Sharp_Abstact
                         break;
                     case 2:
                         {
-                            Console.WriteLine("Write the width");
-                            int width = int.Parse(Console.ReadLine());
+                            int width = GetMetodInt("Write the width");
 
-                            Console.WriteLine("Write the length");
-                            int length = int.Parse(Console.ReadLine());
+                            int length = GetMetodInt("Write the length");
 
                             Rectangular rectangular = new Rectangular(width, length);
                             rectangular.Width = width;
@@ -57,7 +54,7 @@ namespace C_Sharp_Abstact
            
 
         }
-        static int GetMetodInt(string desc, int min, int max)
+        static int GetMetodInt(string desc, int min=int.MinValue, int max=int.MaxValue)
         {
             int input;
             do
